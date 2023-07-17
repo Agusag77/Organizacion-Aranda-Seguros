@@ -183,7 +183,7 @@ header .navbar-nav .nav-link:hover:before {
     color: rgb(219, 139, 68);
 }
 
-.item-counter h3 {
+.item-counter .text {
     color: rgb(4, 4, 57);
 }
 
@@ -507,7 +507,7 @@ footer {
     }
 
     #nosotros div p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     @keyframes slidein {
