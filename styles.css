@@ -2,9 +2,7 @@
 
 * {
     font-family: "Arial", Helvetica, sans-serif;
-
 }
-
 
 /* Header */
 
@@ -111,7 +109,6 @@ header .navbar-nav .nav-link:hover:before {
 
 #carouselExampleSlidesOnly img {
     width: 100%;
-    height: 100vh;
 }
 
 #carouselExampleSlidesOnly .card {
@@ -141,14 +138,13 @@ header .navbar-nav .nav-link:hover:before {
 /* Nosotros */
 
 #nosotros {
-    color: whitesmoke;
-    height: 100vh;
-    padding-top: 5rem;
-    margin-bottom: 5rem;
+    background: linear-gradient(180deg, rgb(228 228 228 / 54%), transparent);
+    padding: 5rem 0 5rem 0;
+    margin-bottom: 3rem;
 }
 
-#nosotros img {
-    width: 90%;
+#nosotros div img {
+    width: 100%;
     border-radius: 1%;
     box-shadow: 0 8px 32px 0 rgba(11, 12, 27, 0.20);
 }
@@ -194,9 +190,8 @@ header .navbar-nav .nav-link:hover:before {
 /* Clientes */
 
 #seguros {
-    height: 100vh;
     top: 0%;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
 
 #seguros .card-box {
@@ -259,52 +254,38 @@ header .navbar-nav .nav-link:hover:before {
     text-align: center;
     color: rgb(4, 4, 57);
     font-weight: 600;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin: 6rem 0 6rem;
 }
 
 #seguros .container .slider {
-    animation: slidein 30s linear infinite;
+    animation: slidein 27s linear infinite;
     white-space: nowrap;
 }
 
 #seguros .container .slider .logos {
-    width: 100%;
     display: inline-block;
-    margin: 0px 0;
 }
 
 #seguros .container .slider .logos .fab {
-    width: calc(74% / 4.2);
-    height: 6rem;
-    margin: 0.8rem;
-    animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    width: 11rem;
+    height: 4rem;
+    margin: 0.3rem;
 }
 
 @keyframes slidein {
     from {
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0);
     }
 
     to {
-        transform: translate3d(-100%, 0, 0);
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
+        transform: translateX(-100%);
     }
 }
 
 /* Contacto */
 
 #contacto {
-    background-color: rgb(255, 253, 253);
+    background: linear-gradient(0deg, rgb(228 228 228), transparent);
 }
 
 #contacto h2 {
@@ -383,6 +364,10 @@ footer {
     background-color: rgba(194, 202, 206, 0.686);
 }
 
+#footer-logo-redes {
+    padding: 0 5rem 0 5rem;
+}
+
 .logo-footer {
     width: 5rem;
     border-radius: 50%;
@@ -409,19 +394,25 @@ footer {
     transform: translateX(100px);
 }
 
+.footer-copy {
+    background-color: rgb(4, 4, 57);
+    color: rgba(252, 252, 252, 0.6);
+    font-size: 12px;
+    padding-bottom: 0.8rem;
+    padding-top: 1.3rem;
+    text-align: center;
+}
+
+.footer-copy img {
+    width: 214px;
+    height: 35px;
+}
+
 /* Media queries */
 
-@media (max-width: 1280px) {
+@media (min-width: 1280px) {
     #carouselExampleSlidesOnly img {
-        height: 116vh;
-    }
-
-    #nosotros {
-        margin-bottom: 20rem;
-    }
-
-    #seguros {
-        margin-bottom: 50rem;
+        height: 100vh;
     }
 }
 
@@ -438,16 +429,13 @@ footer {
     #carouselExampleSlidesOnly .card {
         padding-bottom: 0;
         width: 40%;
+        margin: 37% 11%;
     }
 
     #carouselExampleSlidesOnly .card-text {
         font-size: 16px;
     }
 
-    #nosotros {
-        margin-bottom: 20rem;
-        
-    }
 }
 
 @media (max-width: 690px) {
@@ -469,6 +457,14 @@ footer {
         height: 5rem;
     }
 
+    #carouselExampleSlidesOnly .card {
+        margin: 35% 11%;
+    }
+
+    #carouselExampleSlidesOnly .card .card-body {
+        padding: 12px;
+    } 
+
     #carouselExampleSlidesOnly .card-title {
         font-size: 20px;
     }
@@ -477,6 +473,9 @@ footer {
         font-size: 14px;
     }
 
+    #nosotros div p {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 490px) {
@@ -495,7 +494,6 @@ footer {
     }
 
     #carouselExampleSlidesOnly .card {
-        padding-bottom: 0;
         width: 50%;
         margin: 25% 7%;
     } 
@@ -506,5 +504,23 @@ footer {
 
     #carouselExampleSlidesOnly .card-text {
         font-size: 12px;
+    }
+
+    #nosotros div p {
+        font-size: 14px;
+    }
+
+    @keyframes slidein {
+        from {
+            transform: translateX(0);
+        }
+    
+        to {
+            transform: translateX(-600%);
+        }
+    }
+
+    #footer-logo-redes {
+        padding: 1rem 2rem 1rem 2rem;
     }
 }
